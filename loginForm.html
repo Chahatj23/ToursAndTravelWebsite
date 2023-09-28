@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loginstyles.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login Form</h1>
+      <form action="" method="get" accept-charset="utf-8" id = loginform>
+        <div class="form-control" hidden="True" id = "name">
+          <input type="name" required />
+          <label>Name</label>
+        </div>
+        <div class="form-control" hidden = "True" id = "phone">
+          <input type="phone" required />
+          <label>Phone</label>
+        </div>
+        <div class="form-control">
+          <input type="email" required /> 
+          <label>Email</label>
+        </div>
+        <div class="form-control">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <button class ="btn" onclick="location.href = 'index.html';" >Login</button>
+        <p class="text">Don't have an account? <a href="#" id = registerbtn>Register</a></p>
+      </form>
+    </div>
+    <script src="./loginstyles.js"></script>
+    <script>
+      const btn = document.getElementById('registerbtn');
+      btn.addEventListener('click', () => {
+      const form = document.getElementById('loginform');
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+      nameInput.hidden = false;
+      phoneInput.hidden = false;
+    });
+    </script>
+  </body>
+</html>
